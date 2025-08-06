@@ -3,7 +3,7 @@
         {
             "image": "id_3/image.nii.gz",
             "mask": "id_3/mask.nii.gz",
-            "label": "pN-",
+            "label": 0,
             "radiomics": [
                 590,
                 69,
