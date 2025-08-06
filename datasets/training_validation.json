@@ -1,0 +1,59 @@
+{
+    "train": [
+        {
+            "image": "id_1/image.nii.gz",
+            "mask": "id_1/mask.nii.gz",
+            "label": "pN-",
+            "radiomics": [
+                900,
+                58,
+                40,
+                2.4,
+                1.4,
+                12,
+                123,
+                150,
+                12,
+                12.5
+            ]
+        },
+        {
+            "image": "id_3/image.nii.gz",
+            "mask": "id_3/mask.nii.gz",
+            "label": "pN+",
+            "radiomics": [
+                300,
+                23,
+                3.5,
+                10,
+                14,
+                120,
+                53,
+                15,
+                12.8,
+                5.3
+            ]
+        }
+        
+    ],
+    "validation": [
+        {
+            "image": "id_2/image.nii.gz",
+            "mask": "id_2/mask.nii.gz",
+            "label": "pN-",
+            "radiomics": [
+                200,
+                23,
+                21,
+                0.4,
+                5.5,
+                12,
+                153,
+                53,
+                22,
+                8.5
+            ]
+        }
+        
+    ]
+}

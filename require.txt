@@ -1,0 +1,11 @@
+pandas==2.3.1
+--find-links https://download.pytorch.org/whl/cu102/torch_stable.html
+torch==1.10.0+cu102
+torchvision==0.11.0+cu102
+torchaudio==0.10.0
+pytorch-metric-learning==2.0.0
+tqdm==4.64.1
+monai==0.9.1
+tensorboard==2.10.0
+numpy==1.23.5
+nibabel

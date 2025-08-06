@@ -1,0 +1,22 @@
+{
+    "test": [
+        {
+            "image": "id_4/image.nii.gz",
+            "mask": "id_4/mask.nii.gz",
+            "label": "pN-",
+            "radiomics": [
+                1200,
+                103,
+                23,
+                5,
+                1.68,
+                20,
+                200,
+                433,
+                16,
+                9.5
+            ]
+        }
+        
+    ]
+}
