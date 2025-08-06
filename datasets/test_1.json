@@ -3,19 +3,23 @@
         {
             "image": "id_3/image.nii.gz",
             "mask": "id_3/mask.nii.gz",
-            "label": label_3,
+            "label": "pN-",
             "radiomics": [
-                feature_3_1,
-                feature_3_2,
-                feature_3_3,
-                feature_3_4,
-                feature_3_5,
-                feature_3_6,
-                feature_3_7,
-                feature_3_8,
-                feature_3_9,
-                feature_3_10
-            ]
+                590,
+                69,
+                12,
+                8.4,
+                5.68,
+                15,
+                155,
+                345,
+                12,
+                4.5
+            ],
+            "label_int_lvi": 0,
+            "label_int_pgrade": 1,
+            "label_int_ptype": 1,
+            "label_float_solid_component": 0.33
         }
         
     ]

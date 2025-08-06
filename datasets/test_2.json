@@ -15,7 +15,11 @@
                 433,
                 16,
                 9.5
-            ]
+            ],
+            "label_int_lvi": 0,
+            "label_int_pgrade": 3,
+            "label_int_ptype": 1,
+            "label_float_solid_component": 0.72
         }
         
     ]
