@@ -124,7 +124,7 @@ class _Transition(nn.Sequential):
         self.add_module("norm", get_norm_layer(name=norm, spatial_dims=spatial_dims, channels=in_channels))
         self.add_module("relu", get_act_layer(name=act))
         self.add_module("conv", conv_type(in_channels, out_channels, kernel_size=1, bias=False))
-        self.add_module("pool", pool_type(kernel_size=2, stride=2))
+        self.add_module("pool", pool_type(kernel_size=1, stride=2)) # changed kernel size from original 2 to 1
 
 
 class DenseNet(nn.Module):
