@@ -292,9 +292,19 @@ def main():
     result = np.concatenate((gt, best_pred), axis=1)
     result_df = pd.DataFrame(result)
     result_df.columns = ['group', 'prediction']
-    writer_1 = pd.ExcelWriter(os.path.join(args.logdir, args.json_list[:-5] + '.xlsx'))
+    # writer_1 = pd.ExcelWriter(os.path.join(args.logdir, args.json_list[:-5] + '.xlsx'))
+    # result_df.to_excel(writer_1, index=False, header=True, float_format='%.4f')
+    # writer_1.save()
+    # writer_1.close()         deleted due to incompatable with pandas 2.x
+ 
+    writer_1 = pd.ExcelWriter(
+    os.path.join(args.logdir, args.json_list[:-5] + '.xlsx'),
+    engine="openpyxl" )
+
+    # 写入 DataFrame
     result_df.to_excel(writer_1, index=False, header=True, float_format='%.4f')
-    writer_1.save()
+
+    # 关闭并保存（pandas ≥ 1.2 推荐）
     writer_1.close()
 
     print(f"Train completed, best auc epoch: {best_auc_epoch}, best accuracy: {best_auc_acc:.4f}, best auc: {best_auc:.4f}, time: {time.time() - start_time:.2f}s!")
