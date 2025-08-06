@@ -188,7 +188,7 @@ def main():
         for step, batch_data in enumerate(train_loader):
             step_time = time.time()
             batch_data["radiomics"] = torch.stack(batch_data["radiomics"]).transpose(0, 1).float()
-            print(batch_data["image"].cuda(args.gpu), batch_data["label"].cuda(args.gpu), batch_data["label_int_lvi"].cuda(args.gpu), batch_data["label_int_pgrade"].cuda(args.gpu), batch_data["label_int_ptype"].cuda(args.gpu), batch_data["label_float_solid_component"].cuda(args.gpu), batch_data["radiomics"].cuda(args.gpu))
+            print(batch_data["image"], batch_data["label"], batch_data["label_int_lvi"], batch_data["label_int_pgrade"], batch_data["label_int_ptype"], batch_data["label_float_solid_component"], batch_data["radiomics"])
             inputs, labels, labels_int_lvi, labels_int_pgrade, labels_int_ptype, labels_float_solid_component, radiomics_features = batch_data["image"].cuda(args.gpu), batch_data["label"].cuda(args.gpu), batch_data["label_int_lvi"].cuda(args.gpu), batch_data["label_int_pgrade"].cuda(args.gpu), batch_data["label_int_ptype"].cuda(args.gpu), batch_data["label_float_solid_component"].cuda(args.gpu), batch_data["radiomics"].cuda(args.gpu)
             optimizer.zero_grad()
             outputs, features, outputs_1, outputs_2, outputs_3, outputs_4 = model(inputs, radiomics_features)
